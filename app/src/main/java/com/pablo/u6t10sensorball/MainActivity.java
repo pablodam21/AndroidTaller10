@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         ballView = new BallView(this);
         setContentView(ballView);
-
+        //6.1 portait block
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 

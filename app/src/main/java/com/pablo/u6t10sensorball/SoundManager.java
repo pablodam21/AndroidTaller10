@@ -58,12 +58,12 @@ public class SoundManager {
     }
     //6.4 Generate a ramdom number
     private int ramdom(){
-         int ramdomNumber = (int) ( Math.random() * 4 ) + 1;
+         int ramdomNumber = (int) ( Math.random() * mySoundPoolList.size() ) + 1;
          return ramdomNumber;
     }
 
 
-
+    //6.4.2 free resources
     public void liberar(){
 
         mySoundPoolList.clear();

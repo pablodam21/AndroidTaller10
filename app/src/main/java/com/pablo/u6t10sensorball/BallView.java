@@ -37,10 +37,11 @@ public class BallView extends View implements SensorEventListener {
         soundManager = new SoundManager();
         soundManager.initSoundManager(context);
         soundManager.addSound(1,R.raw.ballbounce);
+        //6.4 sound plus
         soundManager.addSound(2,R.raw.cartonsound);
         soundManager.addSound(3,R.raw.jabsound);
         soundManager.addSound(4,R.raw.jumpsound);
-
+        //6.4 take the resouces for bitmap
         bitmapBall = BitmapFactory.decodeResource(getResources(),R.drawable.chopper);
     }
 
@@ -74,14 +75,15 @@ public class BallView extends View implements SensorEventListener {
 
 
 
-      //  canvas.drawCircle((float) ball.x,(float) ball.y, ball.DIAMETER,pen);
+        //canvas.drawCircle((float) ball.x,(float) ball.y, ball.DIAMETER,pen);
+        //6.3 draw bitmapball
         canvas.drawBitmap(bitmapBall,(float) ball.x,(float) ball.y, pen);
 
     }
 
     protected void updatePhysics(){
         boolean collision = false;
-
+        //6.3 charge the bitball whith
         if (ball.x + bitmapBall.getWidth() > with - 1)  {
             ball.vx = -ball.vx / 2.0;
             ball.x = with - bitmapBall.getWidth();
@@ -137,7 +139,7 @@ public class BallView extends View implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
-
+    //6.4.2 char resources
     public void cargar(Context context){
         soundManager = new SoundManager();
         soundManager.initSoundManager(context);
